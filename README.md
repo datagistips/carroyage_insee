@@ -1,8 +1,8 @@
-Ce code réalisé sous R permet de créer une grille continue, sur un territoire, basée sur celle du carroyage de l'INSEE, et d'affecter à chaque carreau les valeurs de population de 2010 et 2015
+Ce code réalisé sous R permet de créer [une grille continue](https://github.com/datagistips/carroyage_insee/blob/master/grille_1km_corse_pop2010-2015.gpkg), sur un territoire, basée sur celle du carroyage de l'INSEE, et d'affecter à chaque carreau les valeurs de population de 2010 et 2015
 
-Les données de carroyage utilisées en exemple dans le code sont celles des carreaux de 1km pour ces deux années, sur le territoire Corse (avec EPSG `3035`)
+Les données de carroyage utilisées ici sont celles des carreaux de 1km pour ces deux années, sur le territoire Corse (avec EPSG `3035`) pour plus de simplicité
 
-L'intérêt d'avoir un maillage continu est de pouvoir calculer des indicateurs même là où l'on ne compte pas d'habitants, ni en 2010, ni en 2015.
+L'intérêt d'avoir un maillage continu est, en plus de pouvoir combiner les informations de différents millésimes de données, de pouvoir calculer des indicateurs même là où l'on ne compte pas de carreaux (soit d'habitants), ni en 2010, ni en 2015.
 
 # Illustration
 ![](image.png)
@@ -44,7 +44,11 @@ f <- make_grid_with_data(carr_200m_2010,
 - tidyverse
 
 # Méthode
-Le script recrée un raster ayant la résolution et l'étendue correspondant à la couche carroyée, puis le polygonise et lui affecte, par des critères d'éloignement spatiaux, les valeurs des différentes couches carroyées. La valeur est seulement là par sécurité, et aussi afin d'appliquer le script à des pavages légèrement décalés.
+Le script recrée un raster ayant la résolution et l'étendue correspondant à la couche carroyée, puis le polygonise et lui affecte, par des critères d'éloignement spatiaux, les valeurs des différentes couches carroyées. 
+
+La valeur de tolérance, qui définit la distance maximale entre deux carreaux des deux couches est seulement là par sécurité, et aussi afin d'appliquer le script à des pavages légèrement décalés.
+
+Le "moteur" de cette méthode se situe dans le fichier [`script_fxns`](https://github.com/datagistips/carroyage_insee/blob/master/script_fxns.R)
 
 # Arborescence
 
@@ -56,4 +60,4 @@ Le script recrée un raster ayant la résolution et l'étendue correspondant à 
 	|--image.png : image en sortie illustrant la couche
 
 # A savoir
-Le script ne rapatrie que les données de population. Son adaptation permettrait de rapatrier les autres informations, comme celles concernant les ménages, les revenus, ...
+Le script ne rapatrie que les données de population. Une adaptation assez simple permettrait de rapatrier les autres informations, comme celles concernant les ménages, les revenus, ...
