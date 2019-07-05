@@ -2,7 +2,6 @@ library(sf)
 library(tidyverse)
 library(raster)
 
-setwd("D:/GITHUB_CEREMA/insee_carroyage_2010_2015/")
 source("script_fxns.R")
 
 # READ DATA
