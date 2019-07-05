@@ -9,11 +9,11 @@ make_grid_with_data <- function(carr_1km_2010, carr_1km_2015, resolution = 1000,
   
   # SPATIAL JOIN
   ## 2010
-  i_2010 <- st_intersects(f %>% st_buffer(tolerance), 
+  i_2010 <- st_intersects(f %>% st_centroid %>% st_buffer(tolerance), 
                           carr_1km_2010 %>% st_cast("POLYGON") %>% st_centroid)
   
   ## 2015
-  i_2015 <- st_intersects(f %>% st_buffer(tolerance), 
+  i_2015 <- st_intersects(f %>% st_centroid %>% st_buffer(tolerance), 
                           carr_1km_2015 %>% st_centroid)
   
   ## JOIN VALUES
