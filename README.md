@@ -27,7 +27,7 @@ st_write(f, "grille_1km_corse_pop2010-2015.gpkg")
 
 La résolution est, ici, spécifiée à 1km, et un éloignement de moins de 100m entre les centroïdes des deux couches permet d'apparier les carreaux de 2010 et de 2015
 
-## Utilisation sur grand territoire et sur donnée à 200m
+## Utilisation sur un grand territoire et sur la donnée à 200m
 Il est tout à fait possible de répliquer le traitement sur une donnée à 200m et sur le territoire national. Les traitements seront en revanche assez longs.
 
 ```r
