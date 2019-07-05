@@ -44,7 +44,7 @@ f <- make_grid_with_data(carr_200m_2010,
 - tidyverse
 
 # Méthode
-Sur la base de 
+Le script recrée un raster ayant la résolution et l'étendue correspondant à la couche carroyée, puis le polygonise et lui affecte, par des critères d'éloignement spatiaux, les valeurs des différentes couches carroyées. La valeur est seulement là par sécurité, et aussi afin d'appliquer le script à des pavages légèrement décalés.
 
 # Arborescence
 
@@ -54,3 +54,6 @@ Sur la base de
 	|--projet.qgz : projet QGIS de mise en forme des données
 	|--grille_1km_corse_pop2010-2015.gpkg : donnée de sortie au format GeoPackage
 	|--image.png : image en sortie illustrant la couche
+
+# A savoir
+Le script ne rapatrie que les données de population. Son adaptation permettrait de rapatrier les autres informations, comme celles concernant les ménages, les revenus, ...
