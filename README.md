@@ -5,8 +5,8 @@ Les données de carroyage utilisées ici sont celles des carreaux de 1km pour ce
 L'intérêt d'avoir un maillage continu est, en plus de pouvoir combiner les informations de différents millésimes de données, de pouvoir calculer des indicateurs même là où l'on ne compte pas de carreaux (soit d'habitants), ni en 2010, ni en 2015.
 
 # Illustration
-![](image.png)
-Sur cette image, les zones en rouge comptent plus d'habitants en 2015 qu'en 2010, les zones en vert moins, et celles en grises ne comptent pas d'habitants chacune des deux années.
+[![](image.png)](https://github.com/datagistips/carroyage_insee/blob/master/image.png)
+Sur cette [image](https://github.com/datagistips/carroyage_insee/blob/master/image.png), les zones en rouge comptent plus d'habitants en 2015 qu'en 2010, les zones en vert moins, et celles en grises ne comptent pas d'habitants chacune des deux années.
 
 # Données utilisées
 [Carroyage 1km de 2015](https://insee.fr/fr/statistiques/4176293?sommaire=4176305#titre-bloc-7)  
