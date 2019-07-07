@@ -51,13 +51,15 @@ La valeur de tolérance, qui définit la distance maximale entre deux carreaux d
 Le "moteur" de cette méthode se situe dans le fichier [`script_fxns`](https://github.com/datagistips/carroyage_insee/blob/master/script_fxns.R)
 
 # Arborescence
-
-	|--in : contient les données d'entrée utilisées dans l'exemple
-	|--script.R : script
-	|--script_fxns.R : contient la fonction R d'appariement insee 2010 et insee 2015
-	|--projet.qgz : projet QGIS de mise en forme des données
-	|--grille_1km_corse_pop2010-2015.gpkg : donnée de sortie au format GeoPackage
-	|--image.png : image en sortie illustrant la couche
+```
+.
+├── in 		  				# contient les données d'entrée utilisées dans l'exemple
+├── script.R      				# script
+├── script_fxns.R 				# contient la fonction R d'appariement insee 2010 et insee 2015
+├── projet.qgz    				# projet QGIS de mise en forme des données
+├── grille_1km_corse_pop2010-2015.gpkg 		# donnée de sortie au format GeoPackage
+├── image.png 					# image en sortie illustrant la couche
+```
 
 # A savoir
 Le script ne rapatrie que les données de population. Une adaptation assez simple permettrait de rapatrier d'autres informations, comme celles concernant les ménages, les revenus, ...
